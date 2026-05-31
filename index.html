@@ -546,6 +546,9 @@
     /* ─── DIVIDER ─── */
     .ornament { text-align: center; color: var(--muted); font-size: 1.2rem; letter-spacing: 8px; margin: 0; }
     .mobile-close svg { width: 28px; height: 28px; stroke-width: 2; pointer-events: none; }
+
+    /* prevent all lucide SVGs from blocking clicks on their parent */
+    [data-lucide] svg, .skill-icon svg, .contact-link svg, #top-btn svg { pointer-events: none; }
   </style>
 </head>
 <body>
@@ -557,11 +560,11 @@
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose" aria-label="Close"><i data-lucide="x"></i></button>
-    <a href="#about" onclick="closeMobile()">About</a>
-    <a href="#skills" onclick="closeMobile()">Skills</a>
-    <a href="#projects" onclick="closeMobile()">Projects</a>
-    <a href="#products" onclick="closeMobile()">Products</a>
-    <a href="#contact" onclick="closeMobile()">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
   </div>
   
   <!-- ─── NAVBAR ─── -->
@@ -1094,14 +1097,14 @@
             </span>
           </a>
           <a href="https://gh.linkedin.com/in/sadick-odai" target="_blank" rel="noopener" class="contact-link">
-            <span class="icon"><i data-lucide="linkedin"></i></span>
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></span>
             <span class="ltext">
               <strong>LinkedIn</strong>
               <span>linkedin.com/in/sadick-odai</span>
             </span>
           </a>
           <a href="https://www.facebook.com/increghana/" target="_blank" rel="noopener" class="contact-link">
-            <span class="icon"><i data-lucide="facebook"></i></span>
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
             <span class="ltext">
               <strong>Facebook</strong>
               <span>facebook.com/increghana</span>
@@ -1201,11 +1204,24 @@
     });
     
     // ── Mobile menu
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.add('open');
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
     });
-    document.getElementById('mobileClose').addEventListener('click', closeMobile);
-    function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+    mobileClose.addEventListener('click', closeMobile);
+
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // close on any nav link click
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobile));
     
     // ── Scroll reveal
     const observer = new IntersectionObserver(entries => {

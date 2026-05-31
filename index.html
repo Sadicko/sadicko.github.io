@@ -545,7 +545,7 @@
     
     /* ─── DIVIDER ─── */
     .ornament { text-align: center; color: var(--muted); font-size: 1.2rem; letter-spacing: 8px; margin: 0; }
-    .mobile-close svg { width: 28px; height: 28px; stroke-width: 2; }
+    .mobile-close svg { width: 28px; height: 28px; stroke-width: 2; pointer-events: none; }
   </style>
 </head>
 <body>
@@ -1156,6 +1156,7 @@
           </div>
           <button type="submit" class="form-submit">Send Message →</button>
           <p id="form-success" style="display:none;color:var(--green);font-size:0.85rem;text-align:center;margin-top:12px;font-weight:600;">✓ Message sent! I'll be in touch shortly.</p>
+          <p id="form-error" style="display:none;color:var(--accent);font-size:0.85rem;text-align:center;margin-top:12px;font-weight:600;"></p>
         </form>
       </div>
     </div>
@@ -1213,11 +1214,41 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     
     // ── Form
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
       e.preventDefault();
-      document.getElementById('form-success').style.display = 'block';
-      e.target.reset();
-      setTimeout(() => { document.getElementById('form-success').style.display = 'none'; }, 6000);
+      const form = e.target;
+      const btn  = form.querySelector('.form-submit');
+      const success = document.getElementById('form-success');
+      const error   = document.getElementById('form-error');
+
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      success.style.display = 'none';
+      error.style.display   = 'none';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          success.style.display = 'block';
+          form.reset();
+          setTimeout(() => { success.style.display = 'none'; }, 6000);
+        } else {
+          const data = await res.json();
+          error.textContent = data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please try again.';
+          error.style.display = 'block';
+        }
+      } catch (err) {
+        error.textContent = 'Network error. Please check your connection and try again.';
+        error.style.display = 'block';
+      } finally {
+        btn.textContent = 'Send Message →';
+        btn.disabled = false;
+      }
     }
     
     // ── Dynamic copyright year

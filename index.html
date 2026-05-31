@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO -->
+  <title>Sadick Sessah-Odai - Full-Stack Developer & Founder, Accra Ghana</title>
+  <meta name="description" content="Sadick Sessah-Odai is a full-stack software developer, mobile app engineer, AI/ML practitioner, and founder of INCREGHANA based in Accra, Ghana. Specialising in Laravel, Flutter, Python and enterprise software." />
+  <meta name="keywords" content="Sadick Sessah-Odai, Sadick Odai, full stack developer Ghana, Laravel developer Ghana, Flutter developer Ghana, INCREGHANA founder, software engineer Accra, Judicial Service Ghana developer, AI developer Ghana" />
+  <meta name="author" content="Sadick Sessah-Odai" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical & OG -->
+  <link rel="canonical" href="https://sadickodai.dev" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sadickodai.dev" />
+  <meta property="og:locale" content="en_GH" />
+  <meta property="og:title" content="Sadick Sessah-Odai - Software Engineer (Full-Stack) & Founder" />
+  <meta property="og:description" content="Full-stack developer, mobile engineer, AI/ML practitioner and founder of INCREGHANA. Building real solutions from Accra, Ghana." />
+  <meta property="og:image" content="https://sadickodai.dev/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sadick Sessah-Odai - Full-Stack Developer & Founder, Accra Ghana" />
+  <meta property="og:site_name" content="Sadick Sessah-Odai" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@KojoSadick" />
+  <meta name="twitter:creator" content="@KojoSadick" />
+  <meta name="twitter:title" content="Sadick Sessah-Odai - Software Engineer (Full-Stack) & Founder" />
+  <meta name="twitter:description" content="Full-stack developer, mobile engineer, AI/ML practitioner and founder of INCREGHANA. Building real solutions from Accra, Ghana." />
+  <meta name="twitter:image" content="https://sadickodai.dev/assets/og.png" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sadick Sessah-Odai",
+      "alternateName": "Sadick Odai",
+      "jobTitle": "Senior Software Engineer & Founder",
+      "worksFor": [
+        { "@type": "Organization", "name": "INCREGHANA (INCRESOFT)" },
+        { "@type": "Organization", "name": "Judicial Service of Ghana" }
+      ],
+      "url": "https://sadickodai.dev",
+      "sameAs": [
+        "https://gh.linkedin.com/in/sadick-odai",
+        "https://facebook.com/sadickodai",
+        "https://x.com/KojoSadick",
+        "https://increghana.com"
+      ],
+      "address": { "@type": "PostalAddress", "addressLocality": "Accra", "addressCountry": "GH" },
+      "knowsAbout": ["Laravel", "PHP", "Flutter", "Python", "Machine Learning", "ASR", "React", "C#", "MySQL", "Filament PHP", "Livewire", "Software Architecture"]
+    }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <meta name="theme-color" content="#C8490A">
+
+  <!-- Fonts: Playfair Display + Cabinet Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  
+  <style>
+    :root {
+      --cream:    #F5F0E8;
+      --cream-2:  #EDE8DC;
+      --ink:      #1A1208;
+      --ink-2:    #3D3020;
+      --muted:    #8A7D6A;
+      --accent:   #C8490A;       /* warm burnt orange - personal, not INCREGHANA orange */
+      --accent-2: #E8A020;       /* amber */
+      --green:    #2A5C3F;
+      --blue:     #1B3A5C;
+      --border:   rgba(26,18,8,0.12);
+      --border-strong: rgba(26,18,8,0.25);
+    }
+    
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+    
+    h1,h2,h3 { font-family: 'Playfair Display', serif; }
+    h4,h5,h6,p,span,a,button,label,input,textarea,select { font-family: 'Cabinet Grotesk', sans-serif; }
+    
+    /* ─── CURSOR ─── */
+    body { cursor: none; }
+    #cursor {
+      width: 10px; height: 10px; background: var(--accent);
+      border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999;
+      transition: transform 0.15s ease, width 0.2s, height 0.2s, background 0.2s;
+      transform: translate(-50%, -50%);
+    }
+    #cursor-ring {
+      width: 36px; height: 36px; border: 1.5px solid var(--accent);
+      border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998;
+      transition: transform 0.35s cubic-bezier(0.25,1,0.5,1), width 0.3s, height 0.3s, opacity 0.3s;
+      transform: translate(-50%, -50%);
+    }
+    body:has(a:hover) #cursor, body:has(button:hover) #cursor { width: 6px; height: 6px; }
+    body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring { width: 52px; height: 52px; }
+    
+    /* ─── NAVBAR ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 20px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.35s ease;
+      border-bottom: 1px solid transparent;
+    }
+    nav.scrolled {
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom-color: var(--border);
+      padding: 14px 48px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900; font-size: 1.2rem;
+      color: var(--ink); text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--ink-2);
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.3px;
+      position: relative; padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1.5px;
+      background: var(--accent); transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--ink); color: var(--cream);
+      border: none; padding: 10px 22px; border-radius: 4px;
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.5px;
+      cursor: none; transition: all 0.25s;
+    }
+    .nav-cta:hover { background: var(--accent); }
+    
+    /* Mobile hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: none; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); transition: all 0.3s; }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; background: var(--cream);
+      z-index: 99; flex-direction: column; align-items: center; justify-content: center;
+      gap: 32px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--ink); text-decoration: none; transition: color 0.2s; }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-close { position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 2rem; cursor: none; color: var(--ink); }
+    
+    @media (max-width: 768px) {
+      nav { padding: 18px 24px; }
+      nav.scrolled { padding: 12px 24px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+    
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      padding: 120px 48px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; bottom: -120px; right: -120px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,73,10,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 28px; height: 1.5px; background: var(--accent);
+    }
+    h1.hero-title {
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 1.0;
+      font-weight: 900;
+      color: var(--ink);
+      letter-spacing: -2px;
+      margin-bottom: 28px;
+    }
+    h1.hero-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 1.05rem; line-height: 1.7;
+      color: var(--muted); max-width: 460px;
+      margin-bottom: 40px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-ink {
+      background: var(--ink); color: var(--cream);
+      padding: 14px 30px; border-radius: 4px;
+      font-size: 0.88rem; font-weight: 700; letter-spacing: 0.4px;
+      text-decoration: none; border: 2px solid var(--ink);
+      transition: all 0.25s;
+    }
+    .btn-ink:hover { background: var(--accent); border-color: var(--accent); }
+    .btn-ghost {
+      background: transparent; color: var(--ink);
+      padding: 14px 30px; border-radius: 4px;
+      font-size: 0.88rem; font-weight: 700; letter-spacing: 0.4px;
+      text-decoration: none; border: 2px solid var(--border-strong);
+      transition: all 0.25s;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    
+    /* hero right */
+    .hero-right {
+      display: flex; flex-direction: column; gap: 20px;
+      padding-left: 48px;
+      border-left: 1px solid var(--border);
+    }
+    .stat-row {
+      display: flex; gap: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem; font-weight: 900;
+      line-height: 1; color: var(--ink); letter-spacing: -2px;
+    }
+    .stat-num span { color: var(--accent); }
+    .stat-label { font-size: 0.75rem; color: var(--muted); margin-top: 4px; font-weight: 500; letter-spacing: 0.5px; }
+    
+    .role-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .role-tag {
+      padding: 6px 14px; border-radius: 2px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      border: 1.5px solid var(--border-strong);
+      color: var(--ink-2);
+    }
+    .role-tag.accent { border-color: var(--accent); color: var(--accent); background: rgba(200,73,10,0.06); }
+    .role-tag.green { border-color: var(--green); color: var(--green); background: rgba(42,92,63,0.06); }
+    .role-tag.blue { border-color: var(--blue); color: var(--blue); background: rgba(27,58,92,0.06); }
+    
+    .availability-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px; border-radius: 4px;
+      background: rgba(42,92,63,0.08); border: 1.5px solid rgba(42,92,63,0.2);
+      font-size: 0.8rem; font-weight: 600; color: var(--green);
+      width: fit-content;
+    }
+    .availability-badge .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--green);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+    
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
+      .hero-right { padding-left: 0; border-left: none; border-top: 1px solid var(--border); padding-top: 32px; }
+    }
+    
+    /* ─── SECTION BASE ─── */
+    section { padding: 100px 48px; border-bottom: 1px solid var(--border); }
+    @media (max-width: 768px) { section { padding: 72px 24px; } }
+    
+    .section-header { margin-bottom: 64px; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--muted);
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+    }
+    .section-label::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--muted); }
+    h2.section-title {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 900; line-height: 1.05;
+      letter-spacing: -1.5px; color: var(--ink);
+    }
+    h2.section-title em { font-style: italic; color: var(--accent); }
+    
+    /* ─── ABOUT ─── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .about-text p { font-size: 1.05rem; line-height: 1.8; color: var(--ink-2); margin-bottom: 20px; }
+    .about-text strong { color: var(--ink); font-weight: 700; }
+    .about-text a { color: var(--accent); text-decoration: underline; }
+    
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .timeline-item {
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 20px; padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-year {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.8rem; font-weight: 700; color: var(--muted);
+      padding-top: 3px;
+    }
+    .timeline-content h4 {
+      font-size: 0.95rem; font-weight: 700; color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .timeline-content h4 span {
+      display: block; font-size: 0.78rem; font-weight: 500; color: var(--accent); margin-top: 2px;
+    }
+    .timeline-content p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-top: 4px; }
+    
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } }
+    
+    /* ─── SKILLS ─── */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+    .skill-card {
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 28px; transition: all 0.3s ease;
+      position: relative; overflow: hidden;
+    }
+    .skill-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--accent); transform: scaleX(0); transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .skill-card:hover { border-color: var(--border-strong); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(26,18,8,0.08); }
+    .skill-card:hover::before { transform: scaleX(1); }
+    .skill-icon { width: 32px; height: 32px; margin-bottom: 14px; display: block; color: var(--accent); stroke-width: 1.5; }
+    .skill-icon svg { width: 32px; height: 32px; }
+    .skill-card h4 { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+    .skill-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .skill-tag {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px;
+      padding: 3px 10px; border-radius: 2px;
+      background: var(--cream-2); color: var(--ink-2);
+      border: 1px solid var(--border);
+    }
+    
+    /* ─── PROJECTS ─── */
+    .projects-list { display: flex; flex-direction: column; gap: 0; }
+    .project-item {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      transition: all 0.25s;
+      cursor: default;
+    }
+    .project-item:first-child { border-top: 1px solid var(--border); }
+    .project-item:hover { background: transparent; }
+    .project-item:hover .project-title { color: var(--accent); }
+    .project-item:hover .project-arrow { transform: translateX(4px) translateY(-4px); }
+    
+    .project-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem; font-weight: 400; color: var(--muted);
+      align-self: start; padding-top: 4px;
+    }
+    .project-info { display: flex; flex-direction: column; gap: 6px; }
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--ink); transition: color 0.25s;
+    }
+    .project-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; max-width: 380px; }
+    .project-meta { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+    .project-type {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .project-role { font-size: 0.78rem; color: var(--ink-2); font-weight: 500; }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 4px; }
+    .project-tech span {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px;
+      padding: 2px 8px; border-radius: 2px;
+      background: var(--cream-2); color: var(--ink-2); border: 1px solid var(--border);
+    }
+     .featured-project-tech { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px; }
+    .featured-project-tech .tools span {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px;
+      padding: 2px 8px; border-radius: 2px;
+      background: var(--cream-2); color: var(--ink-2); border: 1px solid var(--border);
+    }
+
+    .featured-project-tech .tools span:not(:first-child) {
+      margin-left: 4px;
+    }
+
+    .project-arrow {
+      font-size: 1.1rem; color: var(--muted);
+      transition: transform 0.25s, color 0.25s;
+    }
+    .project-item:hover .project-arrow { color: var(--accent); }
+    .project-link { text-decoration: none; display: contents; }
+    
+    @media (max-width: 900px) {
+      .project-item { grid-template-columns: 1fr auto; }
+      .project-meta, .project-tech { display: none; }
+    }
+    
+    /* featured projects */
+    .featured-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 16px; }
+    .featured-card {
+      border: 1px solid var(--border); border-radius: 6px;
+      overflow: hidden; transition: all 0.3s;
+    }
+    .featured-card:hover { transform: translateY(-5px); box-shadow: 0 20px 60px rgba(26,18,8,0.1); border-color: var(--border-strong); }
+    .featured-img {
+      height: 200px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 900; color: white;
+      position: relative; overflow: hidden;
+    }
+    .featured-img .img-label { position: absolute; bottom: 12px; right: 12px; font-family: 'Cabinet Grotesk', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: rgba(0,0,0,0.3); color: white; padding: 3px 8px; border-radius: 2px; }
+    .featured-body { padding: 24px; }
+    .featured-body .type { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .featured-body h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+    .featured-body p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
+    .featured-body a { font-size: 0.8rem; font-weight: 700; color: var(--accent); text-decoration: none; letter-spacing: 0.3px; }
+    .featured-body a:hover { text-decoration: underline; }
+    @media (max-width: 768px) { .featured-grid { grid-template-columns: 1fr; } }
+    
+    /* ─── PRODUCTS OWNED ─── */
+    .products-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .product-own {
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 24px; text-align: center; transition: all 0.3s;
+    }
+    .product-own:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(200,73,10,0.1); }
+    .product-own .pname {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 900;
+      color: var(--ink); margin-bottom: 4px;
+    }
+    .product-own .pcat { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .product-own .pdesc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+    .product-own a { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+    @media (max-width: 900px) { .products-row { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .products-row { grid-template-columns: 1fr; } }
+    
+    /* ─── CONTACT ─── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .contact-info h3 { font-size: 1.8rem; font-weight: 900; color: var(--ink); margin-bottom: 16px; letter-spacing: -1px; }
+    .contact-info p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 36px; }
+    .contact-links { display: flex; flex-direction: column; gap: 16px; }
+    .contact-link {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px; border: 1px solid var(--border);
+      border-radius: 4px; text-decoration: none;
+      transition: all 0.25s; color: var(--ink);
+    }
+    .contact-link:hover { border-color: var(--accent); background: rgba(200,73,10,0.04); }
+    .contact-link .icon { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: var(--accent); flex-shrink: 0; }
+    .contact-link .icon svg { width: 20px; height: 20px; stroke-width: 1.75; }
+    .contact-link .ltext { display: flex; flex-direction: column; }
+    .contact-link .ltext strong { font-size: 0.85rem; font-weight: 700; }
+    .contact-link .ltext span { font-size: 0.75rem; color: var(--muted); }
+    
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid var(--border); border-radius: 4px;
+      background: white; color: var(--ink);
+      font-family: 'Cabinet Grotesk', sans-serif; font-size: 0.9rem;
+      transition: border-color 0.25s; outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-submit {
+      width: 100%; padding: 14px;
+      background: var(--ink); color: var(--cream);
+      border: 2px solid var(--ink); border-radius: 4px;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 0.9rem; font-weight: 700; letter-spacing: 0.5px;
+      cursor: none; transition: all 0.25s;
+    }
+    .form-submit:hover { background: var(--accent); border-color: var(--accent); }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } .form-row { grid-template-columns: 1fr; } }
+    
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 40px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.78rem; color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+    .footer-logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: var(--ink); }
+    .footer-logo span { color: var(--accent); }
+    @media (max-width: 768px) { footer { flex-direction: column; gap: 16px; padding: 32px 24px; text-align: center; } }
+    
+    /* ─── SCROLL REVEAL ─── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    
+    /* ─── SCROLL TO TOP ─── */
+    #top-btn {
+      position: fixed; bottom: 28px; right: 28px; z-index: 50;
+      width: 44px; height: 44px; border-radius: 4px;
+      background: var(--ink); color: var(--cream);
+      border: none; font-size: 1.1rem; cursor: none;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: all 0.3s; box-shadow: 0 4px 16px rgba(26,18,8,0.2);
+    }
+    #top-btn svg { width: 18px; height: 18px; stroke-width: 2.5; }
+    #top-btn.show { opacity: 1; pointer-events: auto; }
+    #top-btn:hover { background: var(--accent); }
+    
+    /* ─── DIVIDER ─── */
+    .ornament { text-align: center; color: var(--muted); font-size: 1.2rem; letter-spacing: 8px; margin: 0; }
+    .mobile-close svg { width: 28px; height: 28px; stroke-width: 2; }
+  </style>
+</head>
+<body>
+  
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close"><i data-lucide="x"></i></button>
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#skills" onclick="closeMobile()">Skills</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#products" onclick="closeMobile()">Products</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+  
+  <!-- ─── NAVBAR ─── -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Sadick<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  
+  
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Available for Projects &amp; Collaboration</div>
+      <h1 class="hero-title">
+        Full-Stack<br/>
+        <em>Developer.</em><br/>
+        Founder.
+      </h1>
+      <p class="hero-sub">
+        I'm <strong>Sadick Sessah-Odai</strong> - senior software engineer at the Judicial Service of Ghana, founder of <strong>INCREGHANA</strong>, and builder of digital products that serve real people across Africa. Based in Accra, building for the world.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-ink">See My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    
+    <div class="hero-right">
+      <div class="availability-badge">
+        <span class="dot"></span>
+        Open to freelance &amp; collaboration
+      </div>
+      
+      <div class="stat-row">
+        <div class="stat-item">
+          <span class="stat-num">50<span>+</span></span>
+          <span class="stat-label">Projects Shipped</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">SaaS Products Built</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">8<span>+</span></span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
+      
+      <div>
+        <p style="font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">What I Do</p>
+        <div class="role-tags">
+          <span class="role-tag accent">Full-Stack Dev</span>
+          <span class="role-tag blue">Mobile Apps</span>
+          <span class="role-tag green">AI / ML / ASR</span>
+          <span class="role-tag">UI/UX Design</span>
+          <span class="role-tag">IT Consultation</span>
+          <span class="role-tag">Photography</span>
+          <span class="role-tag">Graphic Design</span>
+        </div>
+      </div>
+      
+      <div style="padding-top:4px;">
+        <p style="font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Core Stack</p>
+        <div class="role-tags">
+          <span class="role-tag">Laravel / PHP</span>
+          <span class="role-tag">c#</span>
+          <span class="role-tag">Flutter</span>
+          <span class="role-tag">Python</span>
+          <span class="role-tag">React</span>
+          <span class="role-tag">MySQL</span>
+          <span class="role-tag">Bootstrap 5</span>
+          <span class="role-tag">Tailwind</span>
+        </div>
+      </div>
+      
+      <div style="border-top:1px solid var(--border);padding-top:20px;">
+        <p style="font-size:0.78rem;color:var(--muted);line-height:1.6;display:flex;align-items:center;flex-wrap:wrap;gap:6px;">
+          <i data-lucide="map-pin" style="width:14px;height:14px;color:var(--accent);flex-shrink:0;"></i> Accra, Ghana &nbsp;·&nbsp;
+          <i data-lucide="graduation-cap" style="width:14px;height:14px;color:var(--accent);flex-shrink:0;"></i> MSc Computer Science &nbsp;·&nbsp; 
+          <a href="https://gh.linkedin.com/in/sadick-odai" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700;text-decoration:none;">LinkedIn ↗</a> &nbsp;·&nbsp;
+          <a href="https://facebook.com/sadickodai" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700;text-decoration:none;">Facebook ↗</a>  &nbsp;·&nbsp;
+          <a href="https://x.com/KojoSadick" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700;text-decoration:none;">X.com ↗</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- ─── ABOUT ─── -->
+  <section id="about">
+    <div class="section-header reveal">
+      <p class="section-label">01 - About</p>
+      <h2 class="section-title">The person behind<br/><em>the code</em></h2>
+    </div>
+    
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a <strong>full-stack software developer and entrepreneur</strong> based in Accra, Ghana. I currently serve as a <strong>Senior Software Engineer at the Judicial Service of Ghana</strong>, where I help build and maintain digital infrastructure for one of Ghana's most critical institutions.</p>
+        
+        <p>Alongside that, I founded <strong>INCREGHANA (registered as INCRESOFT)</strong> - a technology company through which I've delivered over 50 projects spanning government portals, legal platforms, fintech products, mobile apps, and AI/ML systems. Everything I've shipped under INCREGHANA, I built personally.</p>
+        
+        <p>I hold a <strong>Master's degree in Computer Science from the University of Ghana</strong> (graduated Feb. 2026), sharpening the theory behind what I build. My interest in <strong>Automated Speech Recognition (ASR)</strong> for African languages reflects a deeper conviction: technology should serve the context it lives in.</p>
+        
+        <p>Beyond the screen, I work in <strong>photography and graphic design</strong> - because how something looks is as important as how it works.</p>
+        
+        <div style="margin-top:32px;padding:20px 24px;border-left:3px solid var(--accent);background:rgba(200,73,10,0.04);">
+          <p style="font-style:italic;font-size:0.95rem;color:var(--ink-2);margin:0;line-height:1.7;">
+            "I don't just write code - I understand the business problem first, then architect the right solution."
+          </p>
+        </div>
+      </div>
+      
+      <div class="reveal" style="transition-delay:0.15s;">
+        <p style="font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:24px;">Experience Timeline</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-year">Now</span>
+            <div class="timeline-content">
+              <h4>Senior Software Engineer
+                <span>Judicial Service of Ghana · Accra</span>
+              </h4>
+              <p>Building and maintaining enterprise software for Ghana's judicial system.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2016–</span>
+            <div class="timeline-content">
+              <h4>Founder & Lead Developer
+                <span>INCREGHANA (INCRESOFT) · Accra</span>
+              </h4>
+              <p>Founded and run a full-service tech company. Personally built all client and product work - software, mobile apps, AI/ML, design, and photography services.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2024–26</span>
+            <div class="timeline-content">
+              <h4>MSc Computer Science
+                <span>University of Ghana</span>
+              </h4>
+              <p>Completed postgraduate studies in Computer Science while working full-time as a senior software engineer.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2019–21</span>
+            <div class="timeline-content">
+              <h4>Lead Developer
+                <span>TeamAlfy.com</span>
+              </h4>
+              <p>Full-time lead developer. Contributed to and led the development of several client projects.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2014–18</span>
+            <div class="timeline-content">
+              <h4>BSc Computer Science
+                <span>University of Cape Coast</span>
+              </h4>
+              <p>Undergraduate studies in Computer Science.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- ─── SKILLS ─── -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <p class="section-label">02 - Skills</p>
+      <h2 class="section-title">What I bring<br/><em>to the table</em></h2>
+    </div>
+    
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <span class="skill-icon"><i data-lucide="server"></i></span>
+        <h4>Backend Development</h4>
+        <p>Architecting robust, scalable server-side applications. Strong Laravel expertise including Filament PHP for admin panels and complex multi-tenant systems.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Laravel</span>
+          <span class="skill-tag">c#</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Node.js</span>
+        </div>
+      </div>
+      
+      <div class="skill-card reveal" style="transition-delay:0.08s;">
+        <span class="skill-icon"><i data-lucide="monitor"></i></span>
+        <h4>Frontend Development</h4>
+        <p>Pixel-faithful implementations from design mockups. Building clean, responsive interfaces with performance and accessibility in mind.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">Bootstrap 5</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">Alpine.js</span>
+        </div>
+      </div>
+      
+      <div class="skill-card reveal" style="transition-delay:0.16s;">
+        <span class="skill-icon"><i data-lucide="smartphone"></i></span>
+        <h4>Mobile App Development</h4>
+        <p>Cross-platform and native mobile apps for Android and iOS - from MVP to production-ready. Built for real users, real networks, real Africa.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Flutter</span>
+          <span class="skill-tag">Dart</span>
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">Android</span>
+          <span class="skill-tag">iOS</span>
+        </div>
+      </div>
+      
+      <div class="skill-card reveal" style="transition-delay:0.24s;">
+        <span class="skill-icon"><i data-lucide="brain-circuit"></i></span>
+        <h4>AI / ML &amp; ASR</h4>
+        <p>Machine learning pipelines, NLP, and Automated Speech Recognition with a focus on African languages. Turning data into working, deployable intelligence.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">ASR</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">Data Pipelines</span>
+        </div>
+      </div>
+      
+      <div class="skill-card reveal" style="transition-delay:0.08s;">
+        <span class="skill-icon"><i data-lucide="pen-tool"></i></span>
+        <h4>Design &amp; Photography</h4>
+        <p>Logo design, brand identity, UI/UX prototyping, marketing materials, and professional photography. The complete visual package when a project needs it.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Adobe Photoshop</span>
+          <span class="skill-tag">Illustrator</span>
+          <span class="skill-tag">Photography</span>
+          <span class="skill-tag">Branding</span>
+        </div>
+      </div>
+      
+      <div class="skill-card reveal" style="transition-delay:0.16s;">
+        <span class="skill-icon"><i data-lucide="layers"></i></span>
+        <h4>Software Architecture &amp; IT Consultation</h4>
+        <p>System design, database architecture, tech stack selection, digital transformation planning, and infrastructure guidance for businesses at any scale.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">System Design</span>
+          <span class="skill-tag">DB Architecture</span>
+          <span class="skill-tag">Cloud</span>
+          <span class="skill-tag">Cybersecurity</span>
+          <span class="skill-tag">Agile</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <p class="section-label">03 - Projects</p>
+      <h2 class="section-title">Things I've<br/><em>built &amp; shipped</em></h2>
+      <p style="font-size:0.88rem;color:var(--muted);margin-top:16px;max-width:560px;">Every project below was personally developed by me - either as the lead at INCREGHANA or as a sole developer on subcontracted work. Role notes clarify the engagement type.</p>
+    </div>
+    
+    <!-- Featured 2 -->
+    <div class="featured-grid reveal" style="margin-bottom:0;">
+      <div class="featured-card">
+        <div class="featured-img" style="background:linear-gradient(135deg,#1a0800,#8B3A00);">
+          <!-- <span>txtaro</span> -->
+          <span class="img-label">SaaS Platform</span>
+          <img src="assets/txtaro.png" alt="Txtaro" style="width: 100%;">
+        </div>
+        <div class="featured-body">
+          <p class="type">Bulk SMS · SaaS · Founder</p>
+          <h3>Txtaro</h3>
+          <p>Ghana's bulk SMS platform for businesses and organisations. Built, owned and operated entirely by me - from the architecture to the UI to the billing system.</p>
+          <div class="featured-project-tech">
+            <a href="https://txtaro.com" target="_blank" rel="noopener">Visit txtaro.com ↗</a>
+            <div class="tools">
+              <span>Laravel</span><span>REST API</span><span>MySQL</span><span>Filament PHP</span><span>Livewire</span><span>Alpine</span><span>Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="featured-card">
+        <div class="featured-img" style="background:linear-gradient(135deg,#001122,#0D3A6B);">
+          <!-- <span style="font-size:1.5rem;text-align:center;padding:0 20px;">AFMA Gov Portal</span> -->
+          <span class="img-label">Government · Sole Developer</span>
+          <img src="assets/afma.gov.gh.png" alt="AFMA" style="width: 100%;">
+        </div>
+        <div class="featured-body">
+          <p class="type">Government Portal · Contracted · Sole Developer</p>
+          <h3>AFMA Gov. Portal</h3>
+          <p>Official portal for Assin Foso Municipal Assembly. Contracted to me - designed, developed and deployed entirely as sole developer.</p>
+          <div class="featured-project-tech">
+            <a href="https://afma.gov.gh" target="_blank" class="ms-auto" rel="noopener">Visit afma.gov.gh ↗</a>
+            <div class="tools">
+              <span>Laravel</span><span>MySQL</span><span>Filament PHP</span><span>Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Full project list -->
+    <div class="projects-list reveal" style="margin-top:48px;transition-delay:0.1s;">
+      
+      <a href="https://ghisms.com" target="_blank" rel="noopener" class="project-link">
+        <div class="project-item">
+          <div class="project-info">
+            <span class="project-title">GHISMS (EduH)</span>
+            <span class="project-desc">Ghana Integrated School Management infrastructure platform. Built and owned - The Operating System for Modern School Management.</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">SaaS · Education</span>
+            <span class="project-role">Founder &amp; Sole Developer</span>
+          </div>
+          <div class="project-tech">
+            <span>Laravel</span><span>Postgres</span><span>SMS APIs</span>
+          </div>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+      
+      <a href="https://banqro.com" target="_blank" rel="noopener" class="project-link">
+        <div class="project-item">
+          <div class="project-info">
+            <span class="project-title">Banqro</span>
+            <span class="project-desc">Digital banking and financial management platform for Ghanaian individuals and businesses into Susu and micro-credit operations.</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">Fintech · SaaS</span>
+            <span class="project-role">Founder &amp; Sole Developer</span>
+          </div>
+          <div class="project-tech">
+            <span>Laravel</span><span>Flutter</span><span>Postgres</span>
+          </div>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+      
+      <a href="https://bodida.gov.gh" target="_blank" rel="noopener" class="project-link">
+        <div class="project-item">
+          <div class="project-info">
+            <span class="project-title">Bodida Gov. Website</span>
+            <span class="project-desc">Official portal for a Bodi District Assembly. Contracted to me - designed, developed and deployed entirely as sole developer</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">Government · Agency</span>
+            <span class="project-role">Sole Developer (Contracted)</span>
+          </div>
+          <div class="project-tech">
+            <span>Laravel</span><span>Bootstrap</span><span>MySQL</span>
+          </div>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+      
+      <a href="https://prolawgh.com" target="_blank" rel="noopener" class="project-link">
+        <div class="project-item">
+          <div class="project-info">
+            <span class="project-title">ProLaw Ghana</span>
+            <span class="project-desc">Legal Resource Platform</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">Legal · Web App</span>
+            <span class="project-role">Sole Developer (INCREGHANA)</span>
+          </div>
+          <div class="project-tech">
+            <span>Laravel</span><span>Flutter</span><span>Postgres</span>
+          </div>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+      
+      <a href="https://www.bayfieldoilservices.com" target="_blank" rel="noopener" class="project-link">
+        <div class="project-item">
+          <div class="project-info">
+            <span class="project-title">Bayfield Oil Services</span>
+            <span class="project-desc">Corporate website for an oil &amp; gas services company. Clean, professional, and optimised for enterprise credibility.</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">Oil &amp; Gas · Corporate</span>
+            <span class="project-role">Sole Developer (Subcontracted)</span>
+          </div>
+          <div class="project-tech">
+            <span>HTML/CSS</span><span>JS</span><span>Bootstrap</span>
+          </div>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+      
+      <a href="https://jusag.org" target="_blank" rel="noopener" class="project-link">
+        <div class="project-item">
+          <div class="project-info">
+            <span class="project-title">Jusag.org</span>
+            <span class="project-desc">Website for Judicial Service Staff Association</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">Legal · NGO</span>
+            <span class="project-role">Sole Developer (Subcontracted)</span>
+          </div>
+          <div class="project-tech">
+            <span>Laravel</span><span>MySQL</span><span>Bootstrap</span>
+          </div>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+      
+      <a href="https://tuaneka.com" target="_blank" rel="noopener" class="project-link">
+        <div class="project-item">
+          <div class="project-info">
+            <span class="project-title">Tuaneka</span>
+            <span class="project-desc">E-commerce and marketplace platform. Contributed to development as lead developer at TeamAlfy.com.</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">E-Commerce · Marketplace</span>
+            <span class="project-role">Lead Developer (TeamAlfy.com)</span>
+          </div>
+          <div class="project-tech">
+            <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+          </div>
+          <span class="project-arrow">↗</span>
+        </div>
+      </a>
+      
+      <div class="project-item" style="cursor:default;">
+        <div class="project-info">
+          <span class="project-title">Church Management System</span>
+          <span class="project-desc">Full digital solution for churches - member records, attendance tracking, giving/donations, events management, and reporting dashboards.</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-type">Management · SaaS</span>
+          <span class="project-role">Founder &amp; Sole Developer</span>
+        </div>
+        <div class="project-tech">
+          <span>Laravel</span><span>Filament</span><span>Flutter</span>
+        </div>
+        <span class="project-arrow" style="color:var(--muted);">-</span>
+      </div>
+      
+      <div class="project-item" style="cursor:default;">
+        <div class="project-info">
+          <span class="project-title">AI / ASR Research Projects</span>
+          <span class="project-desc">Automated Speech Recognition systems with a focus on African language processing. Machine learning pipelines for voice-to-text and NLP tasks.</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-type">AI · Research</span>
+          <span class="project-role">Developer &amp; Researcher</span>
+        </div>
+        <div class="project-tech">
+          <span>Python</span><span>TensorFlow</span><span>ASR</span><span>NLP</span>
+        </div>
+        <span class="project-arrow" style="color:var(--muted);">-</span>
+      </div>
+      
+    </div>
+    
+    <p style="text-align:center;font-size:0.8rem;color:var(--muted);margin-top:40px;font-style:italic;">
+      + Many more across healthcare, NGOs, education, and fintech - available on request.
+    </p>
+  </section>
+  
+  
+  <!-- ─── OWNED PRODUCTS ─── -->
+  <section id="products" style="background:var(--cream-2);">
+    <div class="section-header reveal">
+      <p class="section-label">04 - My Products</p>
+      <h2 class="section-title">Products I own<br/><em>&amp; operate</em></h2>
+      <p style="font-size:0.88rem;color:var(--muted);margin-top:16px;">These aren't client projects - they're mine. Built, launched, and run under INCREGHANA.</p>
+    </div>
+    
+    <div class="products-row reveal">
+      <div class="product-own">
+        <div class="pname" style="color:var(--accent);">txtaro</div>
+        <div class="pcat">Bulk SMS . OTP</div>
+        <div class="pdesc">Reliable SMS gateway platform for bulk messaging, OTP delivery, and transactional alerts. Trusted by businesses across Ghana.</div>
+        <a href="https://txtaro.com" target="_blank" rel="noopener">txtaro.com ↗</a>
+      </div>
+      <div class="product-own">
+        <div class="pname" style="color:var(--green);">GHISMS</div>
+        <div class="pcat">ERP . Education</div>
+        <div class="pdesc"> A comprehensive, cloud-native platform designed for Ghana Educational Service (GES) standards. Empowering educators, engaging parents, and streamlining operations. </div>
+        <a href="https://ghisms.com" target="_blank" rel="noopener">ghisms.com ↗</a>
+      </div>
+      <div class="product-own">
+        <div class="pname" style="color:var(--blue);">Banqro</div>
+        <div class="pcat">Fintech</div>
+        <div class="pdesc">Digital banking &amp; financial management for Ghanaian individuals and growing businesses in the Susu, Credit unions & micro-credit operations.</div>
+        <a href="https://banqro.com" target="_blank" rel="noopener">banqro.com ↗</a>
+      </div>
+      <div class="product-own">
+        <div class="pname" style="font-size:1.1rem;display:flex;align-items:center;justify-content:center;gap:8px;"><i data-lucide="church" style="width:22px;height:22px;"></i> ChurchMS</div>
+        <div class="pcat">Management</div>
+        <div class="pdesc">Church management system - members, attendance, giving records, events, and reports.</div>
+        <a href="https://blue-marten-207492.hostingersite.com" target="_blank">Request Demo →</a>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <p class="section-label">05 - Contact</p>
+      <h2 class="section-title">Let's work<br/><em>together</em></h2>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p>Whether you have a project brief, a half-formed idea, or just want to talk tech - I'm genuinely interested. I take on freelance and subcontract work alongside my full-time role.</p>
+        
+        <div class="contact-links">
+          <a href="mailto:info@sadickodai.dev" class="contact-link">
+            <span class="icon"><i data-lucide="mail"></i></span>
+            <span class="ltext">
+              <strong>Email</strong>
+              <span>hello@sadickodai.dev</span>
+            </span>
+          </a>
+          <a href="https://gh.linkedin.com/in/sadick-odai" target="_blank" rel="noopener" class="contact-link">
+            <span class="icon"><i data-lucide="linkedin"></i></span>
+            <span class="ltext">
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/sadick-odai</span>
+            </span>
+          </a>
+          <a href="https://www.facebook.com/increghana/" target="_blank" rel="noopener" class="contact-link">
+            <span class="icon"><i data-lucide="facebook"></i></span>
+            <span class="ltext">
+              <strong>Facebook</strong>
+              <span>facebook.com/increghana</span>
+            </span>
+          </a>
+          <a href="https://increghana.com" target="_blank" rel="noopener" class="contact-link">
+            <span class="icon"><i data-lucide="building-2"></i></span>
+            <span class="ltext">
+              <strong>Company Website</strong>
+              <span>increghana.com - INCREGHANA</span>
+            </span>
+          </a>
+          <div class="contact-link" style="cursor:default;">
+            <span class="icon"><i data-lucide="map-pin"></i></span>
+            <span class="ltext">
+              <strong>Location</strong>
+              <span>Accra, Greater Accra Region, Ghana</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal" style="transition-delay:0.15s;">
+        <form id="contact-form" action="https://formspree.io/f/xlgvkand" method="POST" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" name="name" required placeholder="Kofi Mensah">
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" required placeholder="kofi@company.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Type of Work</label>
+            <select name="type_of_work">
+              <option value="" disabled selected>Select...</option>
+              <option>Software Development Project</option>
+              <option>Mobile App</option>
+              <option>AI / ML Work</option>
+              <option>Website Design &amp; Development</option>
+              <option>Graphic Design / Photography</option>
+              <option>IT Consultation</option>
+              <option>Subcontract Work</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea name="message" required placeholder="Tell me about your project, timeline, and budget range..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message →</button>
+          <p id="form-success" style="display:none;color:var(--green);font-size:0.85rem;text-align:center;margin-top:12px;font-weight:600;">✓ Message sent! I'll be in touch shortly.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <span class="footer-logo">Sadick Sessah<span>-Odai</span></span>
+    <span>
+      <a href="https://increghana.com" target="_blank" rel="noopener">INCREGHANA</a> &nbsp;·&nbsp;
+      <a href="https://gh.linkedin.com/in/sadick-odai" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp;
+      <a href="https://facebook.com/sadickodai" target="_blank" rel="noopener">Facebook</a> &nbsp;·&nbsp;
+      <a href="https://txtaro.com" target="_blank" rel="noopener">Txtaro</a> &nbsp;·&nbsp;
+      <a href="https://ghisms.com" target="_blank" rel="noopener">GHISMS (EduH)</a>
+    </span>
+    <span>© <span id="copy-year">2026</span> Sadick Sessah-Odai · Accra, Ghana</span>
+  </footer>
+  
+  <button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+  
+  
+  <script>
+    // ── Custom cursor
+    const cursor = document.getElementById('cursor');
+    const ring   = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx+'px'; cursor.style.top = my+'px'; });
+    function animateRing() {
+      rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+      ring.style.left = rx+'px'; ring.style.top = ry+'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+    
+    // ── Navbar scroll
+    const nav = document.getElementById('navbar');
+    const topBtn = document.getElementById('top-btn');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+      topBtn.classList.toggle('show', window.scrollY > 400);
+    });
+    
+    // ── Mobile menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', closeMobile);
+    function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+    
+    // ── Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    // ── Form
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.reset();
+      setTimeout(() => { document.getElementById('form-success').style.display = 'none'; }, 6000);
+    }
+    
+    // ── Dynamic copyright year
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+    // ── Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

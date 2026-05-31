@@ -4,7 +4,7 @@ Personal portfolio website for **Sadick Sessah-Odai** — Senior Software Engine
 
 ## Live Site
 
-> Hosted on GitHub Pages · Custom domain `sadickodai.dev` (coming soon)
+**[sadicko.github.io](https://sadicko.github.io)** · Custom domain `sadickodai.dev` coming soon
 
 ## Stack
 
@@ -26,10 +26,13 @@ Pure HTML, CSS, and vanilla JavaScript — no build tools, no frameworks, no dep
 
 This site is deployed via **GitHub Pages** from the `main` branch.
 
-To deploy your own fork:
-1. Push to a repo named `yourusername.github.io` for a root domain, or any repo name for a project subdomain
-2. Go to **Settings → Pages → Source → main / root**
-3. Once you have a custom domain, add it under **Settings → Pages → Custom domain** and update the `canonical`, `og:url`, `og:image`, and `twitter:image` URLs in `index.html`
+## Switching to a Custom Domain
+
+When `sadickodai.dev` is ready:
+1. Add the domain under **Settings → Pages → Custom domain** in GitHub
+2. Remove the `<base href="/sadickodai/">` line from `index.html`
+3. Update `canonical`, `og:url`, and the JSON-LD `url` field back to `https://sadickodai.dev`
+4. Update `og:image` and `twitter:image` — they already point to `sadickodai.dev` so those are done
 
 ## License
 
